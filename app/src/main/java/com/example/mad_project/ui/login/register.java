@@ -23,13 +23,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mad_project.R;
-import com.example.mad_project.ui.login.LoginViewModel;
-import com.example.mad_project.ui.login.LoginViewModelFactory;
 import com.example.mad_project.databinding.ActivityRegisterBinding;
 
-public class LoginActivity extends AppCompatActivity {
+public class register extends AppCompatActivity {
 
-    private LoginViewModel loginViewModel;
+    public LoginViewModel loginViewModel;
     private ActivityRegisterBinding binding;
 
     @Override
@@ -42,10 +40,10 @@ public class LoginActivity extends AppCompatActivity {
         loginViewModel = new ViewModelProvider(this, new LoginViewModelFactory())
                 .get(LoginViewModel.class);
 
-        final EditText usernameEditText = binding.username;
+        final EditText usernameEditText = binding.email;
         final EditText passwordEditText = binding.password;
-        final Button loginButton = binding.login;
-        final ProgressBar loadingProgressBar = binding.loading;
+        final Button loginButton = (Button) binding.loginNow;
+        final ProgressBar loadingProgressBar = binding.progressBar;
 
         loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
             @Override

@@ -16,10 +16,10 @@
         <activity
             android:name=".register"
             android:theme="@style/Theme.Material3.Light.NoActionBar"
-            android:exported="false" >
+            android:exported="true" >
         <meta-data
             android:name=".ui.register"
-            android:exported="false"
+            android:exported="true"
             android:label="@string/title_activity_register" />
         </activity>
         <activity
@@ -28,7 +28,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
